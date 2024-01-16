@@ -4,6 +4,7 @@ CONFIG_FILE="/etc/samba/smb.conf"
 
 hostname=`hostname`
 set -e
+rm -f "$CONFIG_FILE"
 if [[ ! -f $CONFIG_FILE ]]
 then
 cat >"$CONFIG_FILE" <<EOT
